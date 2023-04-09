@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+:root{
+    --color-fire: #ff7402;
+	--color-grass: #9bcc50;
+	--color-steel: #9eb7b8;
+	--color-water: #4592c4;
+	--color-psychic: #f366b9;
+	--color-ground: #ab9842;
+	--color-ice: #51c4e7;
+	--color-flying: #3dc7ef;
+	--color-normal: #a4acaf;
+	--color-poison: #7e0058;
+	--color-fighting: #d56723;
+	--color-dark: #707070;
+	--color-bug: #729f3f;
+	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+	--color-electric: #bba909;
+	--color-fairy: #fdb9e9;
+	--color-primary: #006d77;
+	--color-primary-hover: #83c5be;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat';
+    background: linear-gradient(white,wheat);
+    background-image: url(./img/darkbg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: auto;
+}
+
+/* Globales */
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 40px 0;
+}
+
+.logo img{
+    width: 150px;
+}
+
+header form{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid red;
+    padding: 15px 20px;
+    border-radius: 25px;
+}
+
+.form-group input{
+    font-family: inherit;
+    width: 300px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+.form-group input::placeholder{
+    color: white;
+}
+
+.icon-search{
+    width: 20px;
+    height: 20px;
+    stroke: red;
+}
+
+.btn-search{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-family: inherit;
+    padding: 15px 30px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: orange;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.btn-search:hover{
+    background-color: yellow;
+    color: black;
+    transition: all 0.5s ease;
+}
+
+.container-btn-load-more {
+    text-align: center;
+}
+.container-btn-load-more button{
+color: black;
+border-top-width: 2px;
+outline: none;
+border-radius: 10px;
+font-family: inherit;
+padding: 10px 20px;
+cursor: pointer;
+background-color: whitesmoke ;
+border-color: grey;
+transition: all 0.5s ease;
+}
+.container-btn-load-more button:hover{
+    background-color: lightgray;
+    color: black;
+    transition: all 0.5s ease;
+    border-top-width: 2;
+    border-color: gray;
+}
+
+.container-filter{
+    text-align: center;
+}
+
+.icon-filter{
+    color: white;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.icon-filter .icon{
+    width: 30px;
+    height: 30px;
+    stroke: red;
+}
+
+.card-list-pokemon{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card-pokemon {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.card-img{
+    background: linear-gradient(whitesmoke,grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    height: 250px;
+}
+
+.card-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-info{
+    padding: 15px;
+}
+
+.card-info h3{
+    color: white;
+}
+
+.pokemon-id{
+    display: block;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.card-types{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card-types span{
+    font-size: 12px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.water {
+	background-color: var(--color-water);
+}
+.grass {
+	background-color: var(--color-grass);
+}
+.poison {
+	background-color: var(--color-poison);
+}
+.fire {
+	background-color: var(--color-fire);
+}
+.bug {
+	background-color: var(--color-bug);
+}
+.dragon {
+	background: var(--color-dragon);
+}
+.flying {
+	background-color: var(--color-flying);
+}
+.steel {
+	background-color: var(--color-steel);
+}
+.psychic {
+	background-color: var(--color-psychic);
+}
+.ice {
+	background-color: var(--color-ice);
+}
+.normal {
+	background-color: var(--color-normal);
+}
+.electric {
+	background-color: var(--color-electric);
+}
+.fighting {
+	background-color: var(--color-fighting);
+}
+.fairy {
+	background-color: var(--color-fairy);
+}
+.dark {
+	background-color: var(--color-dark);
+}
+
+.container-filters{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 150px;
+    color: black;
+    background: linear-gradient(gray,whitesmoke);
+    height: 100%;
+    padding-top: 0px;
+    transition: all .3s linear;
+}
+
+.container .p-search{
+    margin-bottom: 15px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.container-filters.active{
+    right: 0;
+}
+
+.filter-by-type{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter-by-type span{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.group-type{
+    display: flex;
+    gap: 10px;
+    margin-left: 15px ;
+}
+
+.group-type label{
+    cursor: pointer;
+}
